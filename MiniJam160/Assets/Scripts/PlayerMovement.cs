@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour {
 
         Vector3 moveDirection = new Vector3(Input.GetAxis("Vertical"), 0, -Input.GetAxis("Horizontal"));
 
-        Vector3 newVelocity = Quaternion.AngleAxis(playerCamera.GetRotation().x - 90, Vector3.up) * moveDirection.normalized * moveSpeed;
+        Vector3 newVelocity = Quaternion.AngleAxis(playerCamera.GetRotation().x - 90, Vector3.up) * moveSpeed;
         newVelocity.y = rb.velocity.y;
         rb.velocity = newVelocity;
 
